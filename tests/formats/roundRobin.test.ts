@@ -1,4 +1,4 @@
-import { expect, test, describe, it } from "vitest";
+import { expect, describe, it } from "vitest";
 import { generateRoundRobin } from "../../src/formats/roundRobin";
 
 describe("Round-Robin test", () => {

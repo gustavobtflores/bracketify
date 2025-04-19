@@ -14,7 +14,7 @@ export function generateRoundRobin(teams: string[]) {
     teamsCopy = [teamsCopy[teamsCopy.length - 1], ...teamsCopy.slice(0, -1), fixedTeam!];
   }
 
-  return matches.filter(({ home, away }) => !(home === "bye" || away === "bye"));
+  return matches.filter(notBye);
 
   function roundsFor(aQuantity: number) {
     return aQuantity - 1;
@@ -22,5 +22,9 @@ export function generateRoundRobin(teams: string[]) {
 
   function matchesPerRoundFor(aQuantity: number) {
     return aQuantity / 2;
+  }
+
+  function notBye({ home, away }: { home: string; away: string }) {
+    return !(home === "bye" || away === "bye");
   }
 }
