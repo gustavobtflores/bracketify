@@ -1,7 +1,7 @@
 import { expect, describe, it } from "vitest";
 import { generateRoundRobin } from "../../src/formats/roundRobin";
 
-describe("Round-Robin test", () => {
+describe("Round-Robin tests", () => {
   it("should correctly generate matches", () => {
     const teams = ["Alpha", "Bravo", "Charlie", "Delta"];
     const matches = generateRoundRobin(teams);
