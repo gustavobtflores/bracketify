@@ -3,11 +3,11 @@ import { generateSingleElimination } from "../../src/formats/singleElimination";
 
 describe("Single elimination tests", () => {
   it("should correctly generate matches", () => {
-    const seededTeams = ["Bravo", "Charlie", "Delta", "Alpha"];
+    const seededTeams = ["Bravo", "Charlie", "Delta", "Alpha", "Echo", "Foxtrot", "Golf", "Hotel"];
 
     const matches = generateSingleElimination(seededTeams);
 
-    expect(matches).toHaveLength(3);
+    expect(matches).toHaveLength(7);
   });
 
   it("should throw an error if teams amount is invalid", () => {
